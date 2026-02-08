@@ -1,0 +1,30 @@
+import { BrowserRouter } from "react-router-dom";
+import { Navbar, Hero, About, Experience, Tech, Works, Contact } from "./components";
+// import { Feedbacks, StarsCanvas } from "./components";
+// We will uncomment remaining as we build them
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <div className='relative z-0 bg-primary'>
+        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+          <Navbar />
+          <Hero />
+        </div>
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <div className='relative z-0'>
+          <Contact />
+          {/* <StarsCanvas /> */}
+        </div>
+        <div className="h-screen flex items-center justify-center">
+          <h1 className="text-4xl font-bold">Portfolio is building...</h1>
+        </div>
+      </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
